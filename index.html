@@ -14,6 +14,8 @@
     <body>
       <h1>Tic Tac Toe</h1>
 
+      <!-- onclick - SignUp goes invisible on submit-->
+      <!-- sign-up button - from class notes/lecture-->
       <form id="sign-up" class="border" onsubmit="this.style.visibility='hidden';">
                <fieldset>
                  <legend>Sign up!</legend>
@@ -24,6 +26,7 @@
                  <input type="submit" value="Sign up!">
                </fieldset>
       </form>
+      <!-- sign-in button - from class notes/lecture-->
       <form id="sign-in" class="border">
               <fieldset>
                 <legend> Sign In!</legend>
@@ -32,7 +35,7 @@
                 <input type="submit" value="Sign In!">
               </fieldset>
       </form>
-
+      <!-- sign-out button - from class notes/lecture-->
       <form id="sign-out" class="border">
               <fieldset>
                 <legend> Sign Out!</legend>
@@ -41,23 +44,25 @@
       </form>
 
       <div id="message"> Message </div>
-
-      <table>
+      <table id="board">
         <tr>
-          <td class="square" id="square0">x</td>
-          <td class="square" id="square1">o</td>
-          <td class="square" id="square2"></td>
+          <td class="cell" onClick="nextMove(this)" id="c0"></td>
+          <td class="cell" onClick="nextMove(this)" id="c1"></td>
+          <td class="cell" onClick="nextMove(this)" id="c2"></td>
         </tr>
         <tr>
-          <td class="square" id="square3"></td>
-          <td class="square" id="square4"></td>
-          <td class="square" id="square5"></td>
+          <td class="cell" onClick="nextMove(this)" id="c3"></td>
+          <td class="cell" onClick="nextMove(this)" id="c4"></td>
+          <td class="cell" onClick="nextMove(this)" id="c5"></td>
         </tr>
         <tr>
-          <td class="square" id="square6"></td>
-          <td class="square" id="square7"></td>
-          <td class="square" id="square8"></td>
+          <td class="cell" onClick="nextMove(this)" id="c6"></td>
+          <td class="cell" onClick="nextMove(this)" id="c7"></td>
+          <td class="cell" onClick="nextMove(this)" id="c8"></td>
         </tr>
     </table>
+    <div>
+      <button id="restart">Restart</button>
+    </div>
     </body>
 </html>

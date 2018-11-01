@@ -2,6 +2,7 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
+// taken from class lecture
 const signUp = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -9,22 +10,19 @@ const signUp = data => {
     data
   })
 }
-
+// taken from class lecture
 const signIn = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
-    // data: data
     data
-    // shorthand - not redundant
   })
 }
-
+// taken from class lecture
 const signOut = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
-    // data
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

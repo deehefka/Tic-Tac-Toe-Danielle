@@ -8,11 +8,12 @@ const signUpSuccess = data => {
   $('#message').addClass('success')
   console.log('signUpSuccess ran. Data is :', data)
 }
+
 const signUpFailure = data => {
   $('#message').text('Error on sign up')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  //console.error('signUpFailure ran. Error is :', error)
+  // console.error('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = data => {
@@ -26,7 +27,7 @@ const signInFailure = data => {
   $('#message').text('Error on sign in')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  //console.error('signInFailure ran. Error is :', error)
+  // console.error('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = data => {
@@ -40,7 +41,7 @@ const signOutFailure = data => {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  //console.error('signOutFailure ran. Error is :', error)
+  // console.error('signOutFailure ran. Error is :', error)
 }
 module.exports = {
   signUpSuccess,

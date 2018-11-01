@@ -14,11 +14,11 @@
     <body>
       <h1>Tic Tac Toe</h1>
 
-      <form id="sign-up" class="border">
+      <form id="sign-up" class="border" onsubmit="this.style.visibility='hidden';">
                <fieldset>
                  <legend>Sign up!</legend>
                  <input type="text" name="credentials[email]" placeholder="Email">
-                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="password" name="credentials[password]" placeholder="Password" >
                  <input type="password" name="credentials[password_confirmation]"
                         placeholder="Confirm Password">
                  <input type="submit" value="Sign up!">

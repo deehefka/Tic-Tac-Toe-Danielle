@@ -10,26 +10,53 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      <link rel="stylesheet" href="styles.index.scss">
     </head>
     <body>
       <h1>Tic Tac Toe</h1>
+
+      <form id="sign-up" class="border">
+               <fieldset>
+                 <legend>Sign up!</legend>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="password" name="credentials[password_confirmation]"
+                        placeholder="Confirm Password">
+                 <input type="submit" value="Sign up!">
+               </fieldset>
+      </form>
+      <form id="sign-in" class="border">
+              <fieldset>
+                <legend> Sign In!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email" />
+                <input type="text" name="credentials[password]" placeholder="Password">
+                <input type="submit" value="Sign In!">
+              </fieldset>
+      </form>
+
+      <form id="sign-out" class="border">
+              <fieldset>
+                <legend> Sign Out!</legend>
+                <input type="submit" value="Sign Out!">
+              </fieldset>
+      </form>
+
       <div id="message"> Message </div>
+
       <table>
         <tr>
-          <td> class="square" id="square0"</td>
-          <td> class="square" id="square1"</td>
-          <td> class="square" id="square2"</td>
+          <td class="square" id="square0">x</td>
+          <td class="square" id="square1">o</td>
+          <td class="square" id="square2"></td>
         </tr>
         <tr>
-          <td> class="square" id="square3"</td>
-          <td> class="square" id="square4"</td>
-          <td> class="square" id="square5"</td>
+          <td class="square" id="square3"></td>
+          <td class="square" id="square4"></td>
+          <td class="square" id="square5"></td>
         </tr>
         <tr>
-          <td> class="square" id="square6"</td>
-          <td> class="square" id="square7"</td>
-          <td> class="square" id="square8"</td>
+          <td class="square" id="square6"></td>
+          <td class="square" id="square7"></td>
+          <td class="square" id="square8"></td>
         </tr>
     </table>
     </body>

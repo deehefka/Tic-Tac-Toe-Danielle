@@ -13,3 +13,17 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
 })
+
+
+// defining players/turns
+const turnOne = 'X'
+const turnTwo = "O"
+
+// jQuery  html() method
+// sets content for selected elements
+// https://www.w3schools.com/jquery/html_html.asp
+$(document).ready(function () {
+  $('.cell').click(function () {
+    $(this).html(turnOne)
+  })
+})

@@ -10,6 +10,7 @@ const signUp = data => {
     data
   })
 }
+
 // taken from class lecture
 const signIn = data => {
   return $.ajax({
@@ -40,12 +41,6 @@ const signOut = data => {
     }
   })
 }
-// const turnOne = 'X'
-// const playerTwo = 'O'
-
-// $('.cell').click(function () {
-  // $(this).html(turnOne);
-// })
 
 module.exports = {
   signUp,

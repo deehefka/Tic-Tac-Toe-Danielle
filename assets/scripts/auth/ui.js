@@ -29,6 +29,7 @@ const signInSuccess = data => {
   $('#sign-in').trigger('reset')
   // console.log('signInSuccess ran. Data is :', data)
 }
+
 // taken from class lecture
 const signInFailure = data => {
   $('#message').text('Error on sign in')
@@ -38,23 +39,24 @@ const signInFailure = data => {
   $('#sign-in').trigger('reset')
   // console.error('signInFailure ran. Error is :', error)
 }
+
 // taken from class lecture
 const changePasswordSuccess = data => {
   $('#message').text('Password changed successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
+  console.log('changePasswordSuccess ran. Data is :', data)
   // clears sign in information
   $('#change-password').trigger('reset')
-  console.log('changePasswordSuccess ran. Data is :', data)
 }
 
 const changePasswordFailure = error => {
   $('#message').text('Error on password change')
   $('#message').removeClass()
   $('#message').addClass('failure')
+  console.error('changePasswordFailure ran. Error is :', error)
   // clears sign in information
   $('#change-password').trigger('reset')
-  console.error('changePasswordFailure ran. Error is :', error)
 }
 // taken from class lecture
 const signOutSuccess = data => {

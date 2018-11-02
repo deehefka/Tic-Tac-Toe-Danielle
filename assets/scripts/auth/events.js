@@ -21,6 +21,7 @@ const onSignIn = event => {
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
+
 // taken from class lecture
 const onChangePassword = event => {
   event.preventDefault()
@@ -37,6 +38,8 @@ const onSignOut = event => {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+
+
 
 module.exports = {
   onSignUp,

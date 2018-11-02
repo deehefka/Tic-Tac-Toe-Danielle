@@ -35,6 +35,15 @@
                 <input type="submit" value="Sign In!">
               </fieldset>
       </form>
+      <!-- change pass button - from class notes/lecture-->
+      <form id="change-password" class="border">
+         <fieldset>
+           <legend>Change password!</legend>
+           <input type="password" name="passwords[old]" placeholder="Old password">
+           <input type="password" name="passwords[new]" placeholder="New password">
+           <input type="submit" value="Change password!">
+         </fieldset>
+      </form>
       <!-- sign-out button - from class notes/lecture-->
       <form id="sign-out" class="border">
               <fieldset>
@@ -46,19 +55,19 @@
       <div id="message"> Message </div>
       <table id="board">
         <tr>
-          <td class="cell" onClick="nextMove(this)" id="c0"></td>
-          <td class="cell" onClick="nextMove(this)" id="c1"></td>
-          <td class="cell" onClick="nextMove(this)" id="c2"></td>
+          <td class="cell" id="c0"></td>
+          <td class="cell" id="c1"></td>
+          <td class="cell" id="c2"></td>
         </tr>
         <tr>
-          <td class="cell" onClick="nextMove(this)" id="c3"></td>
-          <td class="cell" onClick="nextMove(this)" id="c4"></td>
-          <td class="cell" onClick="nextMove(this)" id="c5"></td>
+          <td class="cell" id="c3"></td>
+          <td class="cell" id="c4"></td>
+          <td class="cell" id="c5"></td>
         </tr>
         <tr>
-          <td class="cell" onClick="nextMove(this)" id="c6"></td>
-          <td class="cell" onClick="nextMove(this)" id="c7"></td>
-          <td class="cell" onClick="nextMove(this)" id="c8"></td>
+          <td class="cell" id="c6"></td>
+          <td class="cell" id="c7"></td>
+          <td class="cell" id="c8"></td>
         </tr>
     </table>
     <div>

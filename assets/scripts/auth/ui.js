@@ -31,6 +31,20 @@ const signInFailure = data => {
   // console.error('signInFailure ran. Error is :', error)
 }
 // taken from class lecture
+const changePasswordSuccess = data => {
+  $('#message').text('Password changed successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('changePasswordSuccess ran. Data is :', data)
+}
+
+const changePasswordFailure = error => {
+  $('#message').text('Error on password change')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('changePasswordFailure ran. Error is :', error)
+}
+// taken from class lecture
 const signOutSuccess = data => {
   $('#message').text('Signed out successfully')
   store.user = null
@@ -51,6 +65,8 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
   signOutSuccess,
   signOutFailure
 }

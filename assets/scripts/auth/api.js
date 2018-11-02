@@ -19,6 +19,18 @@ const signIn = data => {
   })
 }
 // taken from class lecture
+const changePassword = data => {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+// taken from class lecture
 const signOut = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
@@ -28,9 +40,16 @@ const signOut = data => {
     }
   })
 }
+// const turnOne = 'X'
+// const playerTwo = 'O'
+
+// $('.cell').click(function () {
+  // $(this).html(turnOne);
+// })
 
 module.exports = {
   signUp,
   signIn,
+  changePassword,
   signOut
 }

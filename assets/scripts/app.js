@@ -41,4 +41,22 @@ square.on('click', function (i) {
     // subtracts from currentTurn to change back to turnOne
     currentTurn--
   }
+  checkForWinner()
 })
+// function to check for winner
+function checkForWinner () {
+// min amount of moves to win - only check on 5+ moves
+  if (movesMade > 4) {
+    // call protoype method on empty array which allows you to use method (slice)
+    // slice takes a section of an array and returns a new array
+    // call specifies our 'cells' (the board) to create new array
+    const moves = Array.prototype.slice.call($('.cell'))
+    // console.log(moves)
+  }
+}
+
+// jQuery  html() method
+// sets content for selected elements
+// $('.cell').click(function () {
+//   $(this).html(turnOne)
+// })

@@ -23,10 +23,10 @@ let currentTurn = 1
 let movesMade = 0
 // anything that has a class of square, add to this variable
 // tracks events
-
-
-// jQuery  html() method
-// sets content for selected elements
-// $('.cell').click(function () {
-//   $(this).html(turnOne)
-// })
+let square = $('.cell')
+// track a click on a square
+square.on('click', function(i) {
+  // console.log(i)
+  // when we click, we know that a move has been made
+  // add to movesMade
+  movesMade++

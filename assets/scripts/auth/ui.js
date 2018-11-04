@@ -77,6 +77,19 @@ const signOutFailure = data => {
   // console.error('signOutFailure ran. Error is :', error)
 }
 
+const restartGameSuccess = data => {
+  $('#message').text('New Game!')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('.cell').trigger('reset')
+}
+
+const restartGameFailure = data => {
+  $('#message').text('New Game not started')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -85,5 +98,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  restartGameSuccess,
+  restartGameFailure
 }

@@ -39,9 +39,19 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onRestartGame = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.restartGame(data)
+    .then(ui.restartGameSuccess)
+    .catch(ui.restartGameFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onRestartGame
 }

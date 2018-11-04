@@ -12,6 +12,7 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#restart-game').on('click', authEvents.onRestartGame)
 })
 
 // defining players/turns
@@ -41,7 +42,6 @@ square.on('click', function (i) {
     // subtracts from currentTurn to change back to turnOne
     currentTurn--
   }
-  checkForWinner()
 })
 // function to check for winner
 function checkForWinner () {
@@ -53,7 +53,7 @@ function checkForWinner () {
     const moves = Array.prototype.slice.call($('.cell'))
     // console.log(moves)
   }
-// all possible ways to win
+  // all possible ways to win
   const winCombos = [
     [0, 1, 2],
     [3, 4, 5],
@@ -65,6 +65,7 @@ function checkForWinner () {
     [2, 4, 6]
   ]
 }
+
 
 // jQuery  html() method
 // sets content for selected elements

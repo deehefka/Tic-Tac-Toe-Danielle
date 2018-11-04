@@ -28,6 +28,9 @@ const signInSuccess = data => {
   // clears sign in information
   $('#sign-in').trigger('reset')
   // console.log('signInSuccess ran. Data is :', data)
+  //$('#sign-in').click(function () {
+    //$('#change-password').trigger('enable')
+ // })
 }
 
 // taken from class lecture

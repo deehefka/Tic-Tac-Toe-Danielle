@@ -14,16 +14,19 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 })
 
-
 // defining players/turns
-const turnOne = 'X'
-const turnTwo = "O"
+let turnOne = 'X'
+let turnTwo = 'O'
+// whose turn it is (player 1)
+let currentTurn = 1
+// to track moves - no moves yet
+let movesMade = 0
+// anything that has a class of square, add to this variable
+// tracks events
+
 
 // jQuery  html() method
 // sets content for selected elements
-// https://www.w3schools.com/jquery/html_html.asp
-$(document).ready(function () {
-  $('.cell').click(function () {
-    $(this).html(turnOne)
-  })
-})
+// $('.cell').click(function () {
+//   $(this).html(turnOne)
+// })

@@ -23,10 +23,22 @@ let currentTurn = 1
 let movesMade = 0
 // anything that has a class of square, add to this variable
 // tracks events
-let square = $('.cell')
+const square = $('.cell')
 // track a click on a square
-square.on('click', function(i) {
+square.on('click', function (i) {
   // console.log(i)
   // when we click, we know that a move has been made
   // add to movesMade
   movesMade++
+  // track whose turn it is
+  if (currentTurn === 1) {
+    event.target.innerHTML = turnOne
+    // add to turns total and switches players
+    currentTurn++
+  } else {
+    // if current turn is not equal to 1, then it is turnTwo
+    event.target.innerHTML = turnTwo
+    // subtracts from currentTurn to change back to turnOne
+    currentTurn--
+  }
+})

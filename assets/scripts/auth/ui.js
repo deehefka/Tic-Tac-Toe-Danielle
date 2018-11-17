@@ -3,12 +3,13 @@
 const store = require('../store.js')
 // taken from class lecture
 const signUpSuccess = data => {
-  $('#message').text('Signed up successfully')
+  $('#message').text('You signed up! Please sign in!')
   $('#message').removeClass()
   $('#message').addClass('success')
   // clears sign up information
   $('#sign-up').trigger('reset')
   // console.log('signUpSuccess ran. Data is :', data)
+  $('#sign-up').hide()
 }
 // taken from class lecture
 const signUpFailure = data => {
@@ -22,15 +23,19 @@ const signUpFailure = data => {
 // taken from class lecture
 const signInSuccess = data => {
   store.user = data.user
-  $('#message').text('Signed in successfully')
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  document.getElementById('change-password').hidden = false
+  document.getElementById('sign-out').hidden = false
+  document.getElementById('new-game').hidden = false
+  document.getElementById('get-games').hidden = false
+  $('#message').text("You're signed in! Hit 'New Game' to Start!")
   $('#message').removeClass()
   $('#message').addClass('success')
   // clears sign in information
+  $('#game-board').show()
   $('#sign-in').trigger('reset')
   // console.log('signInSuccess ran. Data is :', data)
-  //$('#sign-in').click(function () {
-    //$('#change-password').trigger('enable')
- // })
 }
 
 // taken from class lecture
@@ -63,7 +68,7 @@ const changePasswordFailure = error => {
 }
 // taken from class lecture
 const signOutSuccess = data => {
-  $('#message').text('Signed out successfully')
+  $('#message').text('Bye now!')
   store.user = null
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -77,17 +82,30 @@ const signOutFailure = data => {
   // console.error('signOutFailure ran. Error is :', error)
 }
 
-const restartGameSuccess = data => {
-  $('#message').text('New Game!')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('.cell').trigger('reset')
+const startGameSuccess = data => {
+  store.game = data.game
+  $('#message').text('Good luck! X gets to start!')
+  // console.log('startGameSuccess ran. Data is :', data)
 }
 
-const restartGameFailure = data => {
-  $('#message').text('New Game not started')
-  $('#message').removeClass()
+const startGameFailure = data => {
+  $('#message').text('Uh oh. Something happened. Try again.')
   $('#message').addClass('failure')
+  // console.error('startGameFailure ran. Data is :', data)
+}
+
+const updateGameSuccess = data => {
+  store.game = data.game
+  // console.log('updateGameSuccess ran. Data is :', data)
+}
+
+const getGamesSuccess = function (data) {
+  store.games = data.games
+  // console.log(getGameSuccess ran. Data is :', data)
+}
+
+const getGamesFailure = function () {
+  $('#message').text('Uh oh. Something happened. Try again.')
 }
 
 module.exports = {
@@ -99,6 +117,9 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  restartGameSuccess,
-  restartGameFailure
+  startGameSuccess,
+  startGameFailure,
+  updateGameSuccess,
+  getGamesSuccess,
+  getGamesFailure
 }

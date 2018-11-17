@@ -16,7 +16,7 @@
 
       <!-- onclick - SignUp goes invisible on submit-->
       <!-- sign-up button - from class notes/lecture-->
-      <form id="sign-up" class="border" onSubmit="this.style.visibility='hidden';">
+      <form id="sign-up" class="border">
                <fieldset>
                  <legend>Sign up!</legend>
                  <input type="text" name="credentials[email]" placeholder="Email">
@@ -37,7 +37,7 @@
               </fieldset>
       </form>
       <!-- change pass button - from class notes/lecture-->
-      <form id="change-password" class="border">
+      <form id="change-password" class="border" hidden>
          <fieldset>
            <legend>Change password!</legend>
            <input type="password" name="passwords[old]" placeholder="Old password">
@@ -46,33 +46,38 @@
          </fieldset>
       </form>
       <!-- sign-out button - from class notes/lecture-->
-      <form id="sign-out" class="border">
+      <form id="sign-out" class="border" hidden>
               <fieldset>
                 <legend> Sign Out!</legend>
                 <input type="submit" value="Sign Out!">
               </fieldset>
       </form>
 
-      <div id="message"> X gets to start!</div>
-      <table id="board">
-        <tr>
+      <div id="message"></div>
+      <table id="game-board" hidden>
+        <tr id="row1">
           <td class="cell" id="c0"></td>
           <td class="cell" id="c1"></td>
           <td class="cell" id="c2"></td>
         </tr>
-        <tr>
+        <tr id="row2">
           <td class="cell" id="c3"></td>
           <td class="cell" id="c4"></td>
           <td class="cell" id="c5"></td>
         </tr>
-        <tr>
+        <tr id="row3">
           <td class="cell" id="c6"></td>
           <td class="cell" id="c7"></td>
           <td class="cell" id="c8"></td>
         </tr>
     </table>
     <div>
-      <button id="restart-game">Restart</button>
+      <form id="new-game" hidden>
+          <input type="submit" value="New Game">
+      </form>
+      <form id="get-games" hidden>
+        <input type="submit" value="Get Stats">
+      </form>
     </div>
     </body>
 </html>

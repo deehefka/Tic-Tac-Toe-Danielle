@@ -15,46 +15,7 @@ $(() => {
   // $('#restart-game').on('click', authEvents.onRestartGame)
   $('#new-game').on('submit', authEvents.onStartGame)
   $('#get-games').on('submit', authEvents.onGetGames)
-  $('#play-again').on('submit', authEvents.onStartNewGame)
 })
-
-// defining players/turns
-const turnOne = 'X'
-const turnTwo = 'O'
-// whose turn it is (player 1)
-let currentTurn = 1
-// to track moves - no moves yet
-setMessage('Please sign up!')
-// anything that has a class of cell, add to this variable
-// tracks events
-const square = $('.cell')
-// track a click on a square
-square.on('click', function (i) {
-  // console.log(i)
-  // when we click, we know that a move has been made
-  // add to movesMade
-  // movesMade++
-  // track whose turn it is
-  if (currentTurn === 1) {
-    event.target.innerHTML = turnOne
-    // add to turns total and switches players
-    currentTurn++
-    // to tell user whose turn it is
-    setMessage("It's O's Turn!")
-  } else {
-    // if current turn is not equal to 1, then it is turnTwo
-    event.target.innerHTML = turnTwo
-    // subtracts from currentTurn to change back to turnOne
-    currentTurn--
-    // to tell user whose turn it is
-    setMessage("It's X's Turn!")
-  }
-})
-
-// to display message to user
-function setMessage (msg) {
-  document.getElementById('message').innerText = msg
-}
 
 // let counter = 1
 // let winCounter = 0

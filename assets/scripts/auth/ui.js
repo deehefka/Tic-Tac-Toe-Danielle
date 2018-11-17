@@ -106,6 +106,7 @@ const getGamesSuccess = function (data) {
 
 const getGamesFailure = function () {
   $('#message').text('Uh oh. Something happened. Try again.')
+  $('#message').addClass('failure')
 }
 
 module.exports = {

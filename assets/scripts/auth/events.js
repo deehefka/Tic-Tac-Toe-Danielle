@@ -93,7 +93,6 @@ square.on('click', function (i) {
     if (diagOne[0] === diagOne[1] && diagOne[2] === diagOne[0] && diagOne[0] !== '') { x = true } else if (diagTwo[0] === diagTwo[1] && diagTwo[2] === diagTwo[0] && diagTwo[0] !== '') { x = true }
 
     if (x) {
-      $('#message').show()
       $('message').html('Winner, Winner!')
       // can't click anymore squares
       square.off('click')
@@ -104,7 +103,6 @@ square.on('click', function (i) {
       return isNaN(index)
     }).length
     if (!x && movesMade === 9) {
-      $('#message').show()
       $('#message').html("No winner, it's a tie!")
     }
   }

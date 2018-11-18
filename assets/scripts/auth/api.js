@@ -44,7 +44,7 @@ const signOut = data => {
 
 const startGame = data => {
   return $.ajax({
-    url: config.apiUrl + '/games',
+    url: config.apiUrl + '/games/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -52,6 +52,17 @@ const startGame = data => {
     data: {}
   })
 }
+
+// const getStartedGameData = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/games',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: {}
+//   })
+// }
 
 const updateGame = data => {
   return $.ajax({
@@ -66,7 +77,7 @@ const updateGame = data => {
 
 const getGames = data => {
   return $.ajax({
-    url: config.apiUrl + '/games?over=true',
+    url: config.apiUrl + '/games',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -83,4 +94,5 @@ module.exports = {
   startGame,
   updateGame,
   getGames
+  // getStartedGameData
 }

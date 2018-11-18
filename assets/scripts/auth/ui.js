@@ -1,6 +1,10 @@
 'use strict'
 
 const store = require('../store.js')
+
+const square = $('.cell')
+// let x = false
+
 // taken from class lecture
 const signUpSuccess = data => {
   $('#message').text('You signed up! Please sign in!')
@@ -29,6 +33,7 @@ const signInSuccess = data => {
   document.getElementById('sign-out').hidden = false
   document.getElementById('new-game').hidden = false
   document.getElementById('get-games').hidden = false
+  document.getElementById('play-again').hidden = false
   $('#message').text("You're signed in! Hit 'New Game' to Start!")
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -84,13 +89,15 @@ const signOutFailure = data => {
 
 const startGameSuccess = data => {
   store.game = data.game
+  square.on('click')
+  document.getElementById('new-game').hidden = true
   $('#message').text('Good luck! X gets to start!')
   // console.log('startGameSuccess ran. Data is :', data)
 }
 
 const startGameFailure = data => {
   $('#message').text('Uh oh. Something happened. Try again.')
-  $('#message').addClass('failure')
+  // $('#message').addClass('failure')
   // console.error('startGameFailure ran. Data is :', data)
 }
 

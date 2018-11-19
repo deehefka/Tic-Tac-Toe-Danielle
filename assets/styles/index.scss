@@ -15,3 +15,31 @@ td {
 #message {
   font-size: 20pt;
 }
+
+.score-board {
+  padding: 10px;
+}
+
+.playerX {
+  display: inline-block;
+  padding: 15px;
+}
+
+.playerX h4 {
+  font-weight: bold;
+}
+
+.playerO {
+  display: inline-block;
+  padding: 15px;
+}
+
+.playerO h4 {
+  font-weight: bold;
+}
+
+.score-box {
+  border: 3px solid black;
+  padding: 30px;
+  color: #000;
+}

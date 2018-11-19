@@ -32,13 +32,13 @@ const signInSuccess = data => {
   document.getElementById('change-password').hidden = false
   document.getElementById('sign-out').hidden = false
   document.getElementById('new-game').hidden = false
-  document.getElementById('get-games').hidden = false
+  // document.getElementById('get-games').hidden = false
   document.getElementById('play-again').hidden = false
   $('#message').text("You're signed in! Hit 'New Game' to Start!")
   $('#message').removeClass()
   $('#message').addClass('success')
   // clears sign in information
-  $('#game-board').show()
+  // $('#game-board').show()
   $('#sign-in').trigger('reset')
   // console.log('signInSuccess ran. Data is :', data)
 }
@@ -106,15 +106,15 @@ const updateGameSuccess = data => {
   // console.log('updateGameSuccess ran. Data is :', data)
 }
 
-const getGamesSuccess = function (data) {
-  store.games = data.games
-  // console.log(getGameSuccess ran. Data is :', data)
-}
-
-const getGamesFailure = function () {
-  $('#message').text('Uh oh. Something happened. Try again.')
-  $('#message').addClass('failure')
-}
+// const getGamesSuccess = function (data) {
+//   store.games = data.games
+//   // console.log(getGameSuccess ran. Data is :', data)
+// }
+//
+// const getGamesFailure = function () {
+//   $('#message').text('Uh oh. Something happened. Try again.')
+//   $('#message').addClass('failure')
+// }
 
 module.exports = {
   signUpSuccess,
@@ -127,7 +127,7 @@ module.exports = {
   signOutFailure,
   startGameSuccess,
   startGameFailure,
-  updateGameSuccess,
-  getGamesSuccess,
-  getGamesFailure
+  updateGameSuccess
+  // getGamesSuccess,
+  // getGamesFailure
 }

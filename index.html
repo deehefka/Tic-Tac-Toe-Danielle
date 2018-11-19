@@ -52,8 +52,19 @@
                 <input type="submit" value="Sign Out!">
               </fieldset>
       </form>
-
       <div id="message"></div>
+      <div class="score-board">
+        <div class="playerX">
+          <h4>Score: X</h4>
+          <div class="score-box">
+          </div>
+        </div>
+        <div class="playerO">
+          <h4>Score: O</h4>
+          <div class="score-box">
+          </div>
+        </div>
+      </div>
       <table id="game-board" hidden>
         <tr id="row1">
           <td class="cell" id="c0"></td>
@@ -74,9 +85,6 @@
     <div>
       <form id="new-game" hidden>
           <input type="submit" value="New Game">
-      </form>
-      <form id="get-games" hidden>
-        <input type="submit" value="Get Stats">
       </form>
       <form id="play-again" hidden>
      <input type="submit" value="Play Again">

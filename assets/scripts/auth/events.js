@@ -23,6 +23,7 @@ const onSignIn = event => {
   const data = getFormFields(event.target)
   $('#game-board').show()
   $('#play-again').show()
+  $('.score-board').show()
   console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -47,6 +48,8 @@ const onSignOut = event => {
   $('#new-game').hide()
   $('#get-games').hide()
   $('#play-again').hide()
+  $('.score-board').hide()
+  $('#game-board').hide()
   console.log()
   document.getElementById('sign-up').hidden = false
   document.getElementById('sign-in').hidden = false
@@ -75,6 +78,13 @@ const onStartNewGame = event => {
     .catch(ui.startGamefailure)
 }
 
+const onUpdateGame = function () {
+  event.preventDefault()
+  api.updateGame()
+    .then()
+    .catch()
+}
+
 const onGameOver = function () {
   event.preventDefault()
   $('td').off()
@@ -99,5 +109,6 @@ module.exports = {
   onSignOut,
   onStartGame,
   onGameOver,
-  onStartNewGame
+  onStartNewGame,
+  onUpdateGame
 }

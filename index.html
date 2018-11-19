@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Tic Tac Toe</h1>
+
+      <!-- onclick - SignUp goes invisible on submit-->
+      <!-- sign-up button - from class notes/lecture-->
+      <form id="sign-up" class="border">
+               <fieldset>
+                 <legend>Sign up!</legend>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password" >
+                 <input type="password" name="credentials[password_confirmation]"
+                        placeholder="Confirm Password">
+                 <input type="submit" value="Sign up!"/>
+               </fieldset>
+      </form>
+      <!-- onclick - SignIn goes invisible on submit-->
+      <!-- sign-in button - from class notes/lecture-->
+      <form id="sign-in" class="border">
+              <fieldset>
+                <legend> Sign In!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email" />
+                <input type="text" name="credentials[password]" placeholder="Password">
+                <input type="submit" value="Sign In!">
+              </fieldset>
+      </form>
+      <!-- change pass button - from class notes/lecture-->
+      <form id="change-password" class="border" hidden>
+         <fieldset>
+           <legend>Change password!</legend>
+           <input type="password" name="passwords[old]" placeholder="Old password">
+           <input type="password" name="passwords[new]" placeholder="New password">
+           <input type="submit" value="Change password!">
+         </fieldset>
+      </form>
+      <!-- sign-out button - from class notes/lecture-->
+      <form id="sign-out" class="border" hidden>
+              <fieldset>
+                <legend> Sign Out!</legend>
+                <input type="submit" value="Sign Out!">
+              </fieldset>
+      </form>
+      <div id="message"></div>
+      <div class="score-board">
+        <div class="playerX">
+          <h4>Score: X</h4>
+          <div class="score-box">
+          </div>
+        </div>
+        <div class="playerO">
+          <h4>Score: O</h4>
+          <div class="score-box">
+          </div>
+        </div>
+      </div>
+      <table id="game-board" hidden>
+        <tr id="row1">
+          <td class="cell" id="c0"></td>
+          <td class="cell" id="c1"></td>
+          <td class="cell" id="c2"></td>
+        </tr>
+        <tr id="row2">
+          <td class="cell" id="c3"></td>
+          <td class="cell" id="c4"></td>
+          <td class="cell" id="c5"></td>
+        </tr>
+        <tr id="row3">
+          <td class="cell" id="c6"></td>
+          <td class="cell" id="c7"></td>
+          <td class="cell" id="c8"></td>
+        </tr>
+    </table>
+    <div>
+      <form id="new-game" hidden>
+          <input type="submit" value="New Game">
+      </form>
+      <form id="play-again" hidden>
+     <input type="submit" value="Play Again">
+ </form>
+    </div>
+    </body>
+</html>
